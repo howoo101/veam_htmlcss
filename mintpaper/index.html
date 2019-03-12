@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>mintpaper</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Do+Hyeon|Sniglet:400,800');
+            /* css Reset*/
+            body,ul,h1,h2,h3,h4,h5,h6, p {
+                margin: 0;
+                padding: 0;
+            }
+            
+            a {
+                text-decoration: none;
+                color: aliceblue;
+            }
+            
+            li {
+                list-style: none;
+            }
+            
+            
+            /* design area*/
+            .header_wrap {
+                background: url("https://www.mintpaper.co.kr/wp-content/uploads/2014/12/bg_img_main1.png");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+                width: 100%;
+                height: 350px;
+                margin: auto;
+            }
+            .header {
+                background: url("https://www.mintpaper.co.kr/wp-content/uploads/2014/12/bg_img_main2.png");
+                background-size: 80%;
+                background-position: 40px 135px;
+                background-repeat: no-repeat;
+                height: 300px;
+            }
+            .side_nav {
+                width: 500px;
+                height: 280px;
+                border: 10px;
+                padding: 10px;
+                float: right;
+            }
+            
+            .side_nav a img {
+                margin-top:10px;
+                height: 35px;
+            }
+            
+            .side_nav a:nth-child(4) img {
+                height: 30px;
+            }
+            
+            .container {
+                width: 1170px;
+                margin: 0 auto;
+            }
+            
+            .logo img{
+                width: 130px;
+            }
+            
+            .navbar_wrap {
+                background: url("https://www.mintpaper.co.kr/wp-content/uploads/2018/01/bg_bg_img.png");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                height: 41px;
+            }
+            
+            .navbar {
+                font-family: 'Sniglet', cursive;
+                font-weight: 500;
+                font-size: 20px;
+                overflow: hidden;
+                padding-top: 7px;
+            }
+            
+            .navbar li {
+                display: inline;
+                float:left;
+                margin-right: 5.8%;
+            }
+            
+            .navbar li a {
+                padding: 10px 0;
+            }
+            
+            .navbar li a:hover {
+                opacity: 0.5;
+                background: #674403;
+            }
+            .content_wrap {
+                background-color: #e4e4e4;
+                padding: 20px 0;
+            }
+            .content {
+                overflow: hidden;
+                margin-bottom: 15px;
+            }
+            .content:last-child {
+                margin-bottom: 0;
+            }
+            .content_title {
+                background-color: #29b473;
+                color: white;
+                padding-left: 5px;
+            }
+            .left_half_content {
+                width:48%;
+                margin-right: 2%;
+                float: left;
+            }
+            .right_half_content {
+                width:48%;
+                float: right;
+            }
+            .half_list_wrap {
+                padding-left: 10px;
+                margin-top: 5px;
+            }
+            .half_list {
+                margin-top: 10px;
+                margin-bottom: 15px;
+            }
+            .half_list a{
+                color:#3e3939;
+                font-family: 'Do Hyeon', sans-serif;
+                font-weight: 500;
+                border-bottom: 1px solid #c1c1c1;
+            }
+            .content_left {
+                width: 63%;
+                float: left;
+                margin-right: 2%;
+            }
+            .left_content_wrap {
+                width: inherit;
+                margin: 1%;
+                overflow: hidden;
+            }
+            .right_content_wrap {
+                margin-top:10px;
+            }
+            .right_content_wrap iframe {
+                width:100%;
+                height:250px;
+                margin: 15px 0;
+            }
+            .image_wrap {
+                width: 24%;
+                float: left;
+                padding:0.5% 0.5%;
+            }
+            .image_wrap:last-child {
+                padding-right: 0;
+            }
+            
+            .image_wrap img{
+                width: 100%;
+            }
+            .content_right {
+                width: 35%;
+                float: right;
+            }
+            .footer {
+                background: url("https://www.mintpaper.co.kr/wp-content/uploads/2014/09/footer.png");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 100%;
+                height: 260px;
+            }
+            
+            .center {
+                margin: 0 auto;
+                padding-top: 20px;
+                text-align: center;
+                color: white;
+                overflow: hidden;
+                font-size: 15px;
+            }
+            .center p{
+                display: inline;
+            }
+            .center a {
+                padding-left: 10px;
+            }
+            /* tab  */
+            /* Style the tab */
+            .tab {
+              overflow: hidden;
+              background-color: hidden;
+                margin-top:15px;
+            }
+
+            /* Style the buttons inside the tab */
+            .tab button {
+              background-color: inherit;
+              float: left;
+              border: none;
+              outline: none;
+              cursor: pointer;
+              padding: 14px 16px;
+              transition: 0.3s;
+              font-size: 17px;
+            }
+
+            /* Change background color of buttons on hover */
+            .tab button:hover {
+              background-color: #9afca2;
+            }
+
+            /* Create an active/current tablink class */
+            .tab button.active {
+              background-color: #24f072;
+            }
+
+            /* Style the tab content */
+            .tabcontent {
+              display: none;
+              padding: 6px 12px;
+              -webkit-animation: fadeEffect 1s;
+              animation: fadeEffect 1s;
+            }
+            #bml2019 {
+                display: block;
+            }
+            .tabcontent img {
+                width: 360px;
+                height: 360px;
+            }
+            /* Fade in tabs */
+            @-webkit-keyframes fadeEffect {
+              from {opacity: 0;}
+              to {opacity: 1;}
+            }
+
+            @keyframes fadeEffect {
+              from {opacity: 0;}
+              to {opacity: 1;}
+            }
+            /* tab  */
+        </style>
+    </head>
+    <body>
+        <div class="header_wrap">
+            <div class="container header">
+                <a href="#" class="logo">
+                    <img src="images/logo_btn.png">
+                </a>
+                <div class="side_nav">
+                    <a href="#">
+                        <img src="images/login_btn.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="images/join_btn.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="images/web_user.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="images/facebook.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="images/instagram_2017_web.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="images/youtube_2017_web_.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="navbar_wrap">
+            <ul class="navbar container">
+                <li>
+                    <a href="#">HOME</a>
+                </li>
+                <li>
+                    <a href="#">NEWS</a>
+                </li>
+                <li>
+                    <a href="#">GMF</a>
+                </li>
+                <li>
+                    <a href="#">BEAUTIFUL MINT LIFE</a>
+                </li>
+                <li>
+                    <a href="#">LIVE</a>
+                </li>
+                <li>
+                    <a href="#"><strong>광합성</strong></a>
+                </li>
+                <li>
+                    <a href="#">CONTENTS</a>
+                </li>
+                <li>
+                    <a href="#">FREE BOARD</a>
+                </li>
+            </ul>
+        </div>
+        <div class="content_wrap">
+            <div class="content container">
+                <div class="content_left">
+                    <div class="content">
+                        <h2 class="content_title">NEWS</h2>
+                        <div class="left_content_wrap">
+                            <div class="image_wrap">
+                                <img src="images/jjane_single_0312-250x250.jpg" alt="">
+                                <h4>장재인 – [괜찮다고 말해줘]</h4>
+                            </div>
+                            <div class="image_wrap">
+                                <img src="images/epikhigh_2019-250x250.jpg" alt="">
+                                <h4>에픽하이 – [sleepless in __________]</h4>
+                            </div>
+                            <div class="image_wrap">
+                                <img src="images/lop_single-250x250.jpg" alt="">
+                                <h4>Land of Peace – [Coastal Night Out]</h4>
+                            </div>
+                            <div class="image_wrap">
+                                <img src="images/newalbum_0311_cover-250x250.jpg" alt="">
+                                <h4>이주의 신보 - 3월 첫째 주</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h2 class="content_title">BML2019</h2>
+                        <div class="left_content_wrap">
+                            <div class="image_wrap">
+                                <img src="images/bml2019_2nd_lineup_thumbnail-250x250.jpg" alt="">
+                                <h4>BML2019 2차 라인업 발표</h4>
+                            </div>
+                            <div class="image_wrap">
+                                <img src="images/bml2019_sponsor_banner-250x250.jpg" alt="">
+                                <h4>BML2019 스폰서 모집 공고</h4>
+                            </div>
+                            <div class="image_wrap">
+                                <img src="images/bml2019_1st_thumbnail-250x250.jpg" alt="">
+                                <h4>BML2019 1차 라인업 발표</h4>
+                            </div>
+                            <div class="image_wrap">
+                                <img src="images/bml2019_ticket_banner-250x250.jpg" alt="">
+                                <h4>BML2019 공식 티켓 오픈 안내</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h2 class="content_title">LIVE</h2>
+                        <div class="left_content_wrap">
+                            <div class="image_wrap">
+                                <img src="images/SRN_mintpaper_story2-250x250.jpg" alt="">
+                                <h4>소란 ‘Perfect Day 7’ 이야기 #2</h4>
+                            </div>
+                            <div class="image_wrap">
+                                <img src="images/soran_perfect_2019_1-250x250.jpg" alt="">
+                                <h4>소란 ‘Perfect Day 7’ 이야기 #1</h4>
+                            </div>
+                            <div class="image_wrap">
+                                <img src="images/mintfesta62_setlist-250x250.jpg" alt="">
+                                <h4>민트페스타 vol. 62 ~ Auriga SETLIST</h4>
+                            </div>
+                            <div class="image_wrap">
+                                <img src="images/mintfesta_62final-250x250.jpg" alt="">
+                                <h4>민트페스타 vol. 62 ~ Auriga 최종 정리편</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="left_half_content">
+                            <h2 class="content_title">ARCHIVE</h2>
+                            <div class="half_list_wrap">
+                                <div class="half_list">
+                                    <i class="fas fa-angle-right"></i>
+                                    <a href="#">민트라디오 12월 25일 방송(Farewell 편)</a>
+                                </div>
+                                <div class="half_list">
+                                    <i class="fas fa-angle-right"></i>
+                                    <a href="#">민트라디오 12월 18일 방송(인생의 플레이리스트)</a>
+                                </div>
+                                <div class="half_list">
+                                    <i class="fas fa-angle-right"></i>
+                                    <a href="#">민트라디오 12월 11일 방송(10주년 기념 100곡-청춘)</a>
+                                </div>
+                            </div>
+                        </div> 
+
+                        <div class="right_half_content">
+                            <h2 class="content_title">FREE BOARD</h2>
+                            <div class="half_list_wrap">
+                                <div class="half_list">
+                                    <i class="fas fa-angle-right"></i>
+                                    <a href="#">5월 12일 공연</a>
+                                </div>
+                                <div class="half_list">
+                                    <i class="fas fa-angle-right"></i>
+                                    <a href="#">뷰민라</a>
+                                </div>
+                                <div class="half_list">
+                                    <i class="fas fa-angle-right"></i>
+                                    <a href="#">데이브레이크 현장수령 시 신분증</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+                <div class="content_right">
+                    <div class="tab">
+                      <button class="tablinks active" onclick="openCity(event, 'bml2019')">bml2019</button>
+                      <button class="tablinks" onclick="openCity(event, 'bright')">bright</button>
+                      <button class="tablinks" onclick="openCity(event, '광합성')">광합성</button>
+                    </div>
+                    <div id="bml2019" class="tabcontent">
+                      <img src="images/bml2019_2nd_lineup_thumbnail.jpg">
+                    </div>
+                    <div id="bright" class="tabcontent">
+                        <img src="images/bright_7_web.jpg">
+                    </div>
+                    <div id="광합성" class="tabcontent">
+                      <img src="images/ghs_logo.jpg">
+                    </div>
+                    <div class="content">
+                        <h2 class="content_title">YOUTUBE</h2>
+                        <div class="right_content_wrap">
+                            <iframe src="https://www.youtube.com/embed/PBvOnI19b70" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe src="https://www.youtube.com/embed/aeL_SP_1zP8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="center">
+                <p>ⓒ2019 MINTPAPER All Rights Reserved</p>
+                <a href="#">about MINT PAPER</a>
+                <a href="#">이용약관</a>
+                <a href="#">개인정보취급방침</a>
+                <a href="#">contact us</a>
+            </div>
+        </div>
+        
+        <script>
+            function openCity(evt, cityName) {
+              var i, tabcontent, tablinks;
+              tabcontent = document.getElementsByClassName("tabcontent");
+              for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+              }
+              tablinks = document.getElementsByClassName("tablinks");
+              for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+              }
+              document.getElementById(cityName).style.display = "block";
+              evt.currentTarget.className += " active";
+            }
+        </script>
+    </body>
+</html>
