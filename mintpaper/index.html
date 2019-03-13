@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
     <head>
         <title>mintpaper</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
         <style>
             @import url('https://fonts.googleapis.com/css?family=Do+Hyeon|Sniglet:400,800');
+            @charset UTF-8;
             /* css Reset*/
             body,ul,h1,h2,h3,h4,h5,h6, p {
                 margin: 0;
@@ -39,33 +40,40 @@
                 background-repeat: no-repeat;
                 height: 300px;
             }
-            .side_nav {
+            .hd_sns {
                 width: 500px;
                 height: 280px;
                 border: 10px;
                 padding: 10px;
                 float: right;
             }
-            
-            .side_nav a img {
+            .hd_sns>ul>li {
+                float:left;
+            }
+            .hd_sns a img {
                 margin-top:10px;
                 height: 35px;
             }
             
-            .side_nav a:nth-child(4) img {
+            .hd_sns a:nth-child(4) img {
                 height: 30px;
             }
             
-            .container {
+            .center {
                 width: 1170px;
                 margin: 0 auto;
             }
             
-            .logo img{
+            .logo>a {
+                background-image: url(images/logo_btn.png);
+                background-size: cover;
                 width: 130px;
+                height: 130px;
+                margin-top: 20px;
+                float: left;
             }
             
-            .navbar_wrap {
+            .gnb_wrap {
                 background: url("https://www.mintpaper.co.kr/wp-content/uploads/2018/01/bg_bg_img.png");
                 background-size: cover;
                 background-repeat: no-repeat;
@@ -73,7 +81,7 @@
                 height: 41px;
             }
             
-            .navbar {
+            .gnb {
                 font-family: 'Sniglet', cursive;
                 font-weight: 500;
                 font-size: 20px;
@@ -81,17 +89,17 @@
                 padding-top: 7px;
             }
             
-            .navbar li {
+            .gnb>li {
                 display: inline;
                 float:left;
                 margin-right: 5.8%;
             }
             
-            .navbar li a {
+            .gnb>li>a {
                 padding: 10px 0;
             }
             
-            .navbar li a:hover {
+            .gnb>li>a:hover {
                 opacity: 0.5;
                 background: #674403;
             }
@@ -110,6 +118,7 @@
                 background-color: #29b473;
                 color: white;
                 padding-left: 5px;
+                font-size: large;
             }
             .left_half_content {
                 width:48%;
@@ -139,24 +148,30 @@
                 float: left;
                 margin-right: 2%;
             }
+            
             .left_content_wrap {
                 width: inherit;
                 margin: 1%;
                 overflow: hidden;
             }
+            
             .right_content_wrap {
                 margin-top:10px;
             }
+            
             .right_content_wrap iframe {
-                width:100%;
+                width:90%;
                 height:250px;
-                margin: 15px 0;
+                margin: 15px;
+                text-align: center;
             }
+            
             .image_wrap {
                 width: 24%;
                 float: left;
                 padding:0.5% 0.5%;
             }
+            
             .image_wrap:last-child {
                 padding-right: 0;
             }
@@ -164,11 +179,13 @@
             .image_wrap img{
                 width: 100%;
             }
+            
             .content_right {
                 width: 35%;
                 float: right;
             }
-            .footer {
+            
+            footer {
                 background: url("https://www.mintpaper.co.kr/wp-content/uploads/2014/09/footer.png");
                 background-size: cover;
                 background-repeat: no-repeat;
@@ -177,7 +194,7 @@
                 height: 260px;
             }
             
-            .center {
+            .ft_center {
                 margin: 0 auto;
                 padding-top: 20px;
                 text-align: center;
@@ -185,17 +202,16 @@
                 overflow: hidden;
                 font-size: 15px;
             }
-            .center p{
+            .ft_center p{
                 display: inline;
             }
-            .center a {
-                padding-left: 10px;
+            .ft_center a {
+                margin-left: 10px;
             }
             /* tab  */
             /* Style the tab */
             .tab {
-              overflow: hidden;
-              background-color: hidden;
+                overflow: hidden;
                 margin-top:15px;
             }
 
@@ -250,34 +266,53 @@
     </head>
     <body>
         <div class="header_wrap">
-            <div class="container header">
-                <a href="#" class="logo">
-                    <img src="images/logo_btn.png">
-                </a>
-                <div class="side_nav">
-                    <a href="#">
-                        <img src="images/login_btn.png" alt="">
-                    </a>
-                    <a href="#">
-                        <img src="images/join_btn.png" alt="">
-                    </a>
-                    <a href="#">
-                        <img src="images/web_user.png" alt="">
-                    </a>
-                    <a href="#">
-                        <img src="images/facebook.png" alt="">
-                    </a>
-                    <a href="#">
-                        <img src="images/instagram_2017_web.png" alt="">
-                    </a>
-                    <a href="#">
-                        <img src="images/youtube_2017_web_.png" alt="">
-                    </a>
+            <div class="center header">
+                <h1 class="logo">   
+                    <a href="#"></a>
+                </h1>
+                <div class="hd_sns">
+                   <ul>
+                        <li>
+                           <a href="#">
+                                <img src="images/login_btn.png" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/login_btn.png" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/join_btn.png" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/web_user.png" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/facebook.png" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/instagram_2017_web.png" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/youtube_2017_web_.png" alt="">
+                            </a>
+                        </li>
+                   </ul> 
                 </div>
             </div>
         </div>
-        <div class="navbar_wrap">
-            <ul class="navbar container">
+        <div class="gnb_wrap">
+            <ul class="gnb center">
                 <li>
                     <a href="#">HOME</a>
                 </li>
@@ -305,7 +340,7 @@
             </ul>
         </div>
         <div class="content_wrap">
-            <div class="content container">
+            <div class="content center">
                 <div class="content_left">
                     <div class="content">
                         <h2 class="content_title">NEWS</h2>
@@ -433,15 +468,15 @@
                 </div>
             </div>
         </div>
-        <div class="footer">
-            <div class="center">
-                <p>ⓒ2019 MINTPAPER All Rights Reserved</p>
+        <footer>
+            <div class="ft_center">
+                <small>ⓒ2019 MINTPAPER All Rights Reserved</small>
                 <a href="#">about MINT PAPER</a>
                 <a href="#">이용약관</a>
                 <a href="#">개인정보취급방침</a>
                 <a href="#">contact us</a>
             </div>
-        </div>
+        </footer>
         
         <script>
             function openCity(evt, cityName) {
