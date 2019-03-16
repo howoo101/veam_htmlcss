@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>MINI</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <style>
+            @charset "utf-8"
+            @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700');
+            /* css reset*/
+            body, h1, ul, h2, h3, h4, p {
+                margin: 0;
+                padding: 0;
+            }
+            
+            body {
+                font-size: 13px;
+                font-family: 'Roboto Condensed', sans-serif;
+                font-weight: 500;
+            }
+            
+            li {
+                list-style-type: none;
+            }
+            
+            a {
+                text-decoration: none;
+                color: #4a4444;
+            }
+            
+            /* design area*/
+            .container {
+                width: 1280px;
+                margin: 0 auto;
+            }
+            
+            .clear:after {
+                display: block;
+                content: '';
+                clear: both;
+            }
+            
+            .logo {
+                width: 75px;
+                float: left;
+                margin-left: 10px;
+                margin-top: -10px;
+            }
+            
+            .logo > a {
+                display: block;
+                background: url(images/mini-logo.jpg);
+                background-size: cover;
+                height: 75px;
+            }
+            
+            .gnb_wrap {
+                margin-left: 90px;
+                float: left;
+            }
+            
+            .gnb_wrap li {
+                float: left;
+                margin-right: 20px;
+                
+            }
+            
+            .gnb_wrap a {
+                display: block;
+                padding: 25px 0;
+            }
+            
+            .gnb_wrap a:hover {
+                background-color: gainsboro;
+            }
+            
+            .gnb_option {
+                float: right;
+                margin-top: 25px;
+            }
+            
+            .gnb_option li {
+                float: left;
+                margin: 0 20px;
+            }
+            
+            .mini_title {
+                color: #ba0101;
+                font-size: 50px;
+            }
+            
+            .car_intro_wrap {
+                margin-top: 10px;
+            }
+            
+            .car_intro {
+                padding: 20px 20px 30px;
+            }
+            
+            .car_intro > div {
+                float: left;
+            }
+            
+            .car_intro_text > h2 {
+                font-size: 40px;
+            }
+            
+            .car_intro_text > p {
+                font-size: 20px;
+            }
+            
+            .car_intro .detail_button {
+                float: right;
+            }
+            
+            .detail_button {
+                display: block;
+                width: 70px;
+                border: 1px solid #222222;
+                border-radius: 5px;
+                padding: 10px 15px;
+                color: white;
+                background-color: #222222; 
+            }
+            
+            .car_list {
+                background-color: #e5e2e2;
+                border-top: 1px groove #c9c7c7;
+                margin-bottom: 50px;
+                text-align: center;
+            }
+            
+            .car_list li {
+                float: left;
+            }
+            
+            .car_list a {
+                display: block;
+            }
+            
+            .car_list div img {
+                width: 210px;
+            }
+            
+            .car_list div > h4 {
+                margin-bottom: 20px;
+            }
+            
+            .car_list a:hover {
+                margin-top: -20px;
+                border-bottom: 1px solid black;
+            }
+            
+            .car_offer_wrap {
+                padding: 20px;
+            }
+            
+            .car_offer_wrap > h3 {
+                font-size: 20px;
+                margin-bottom: 30px;
+                margin-left: 20px;
+            }
+            
+            .car_offer {
+                float: left;
+                margin-left: 15px;
+                margin-bottom: 30px;
+            }
+            
+            .car_offer >img {
+                margin-bottom: 30px;
+            }
+            
+            .car_offer >h4 {
+                font-size: 30px;
+                margin-bottom: 60px;
+            }
+            
+            .car_offer .mini_grey {
+                color: grey;
+            }
+            
+            .car_offer .mini_lemon {
+                color: #f5ce4d;
+            }
+            
+            .car_offer .detail_button {
+                background-color: #e0c600;
+            }
+            
+            .explore_wrap {
+                background-color: #222222;
+                color: white;
+                padding: 30px 30px 50px 30px;
+                margin-bottom: 40px;
+            }
+            
+            .explore_wrap h3{
+                padding-bottom: 10px;
+                border-bottom: 1px solid grey;
+            }
+            
+            .explore_wrap .detail_button {
+                background-color: red;
+                margin-top: 50px;
+            }
+            
+            .explore {
+                margin-top: 40px;
+            }
+            
+            .ex_h3 {
+                font-size: 20px;
+            }
+            
+            .half_wrap {
+                width: 550px;
+            }
+            
+            .half_wrap p {
+                font-size: 20px;
+            }
+            
+            .half_wrap img {
+                display: block;
+                width: inherit;
+            }
+            
+            .left_pos {
+                float: left;
+            }
+            
+            .right_pos {
+                float: right;
+                margin-top: 10px;
+            }
+            
+            .ex_h4 {
+                font-size: 40px;
+                margin-bottom: 10px;
+            }
+            
+            .news_contents_wrap {
+                background-color: #e5e2e2;
+                font-size: 15px;
+                padding-bottom: 40px;
+            }
+            
+            .news_contents_wrap > h3 {
+                text-align: center;
+                font-size: 30px;
+                margin: 30px 0;
+            }
+            
+            .news_contents_wrap .detail_button {
+                width: 100px;
+                margin-left: 20px;
+                margin-top: 20px;
+            }
+            .news_contents {
+                float: left;
+                width: 400px;
+                margin-left: 20px;
+            }
+            
+            .news_contents img{
+                display: block;
+                width: inherit;
+            }
+            
+            .news_contents > h4 {
+                margin: 30px 0 30px 20px;    
+            }
+            
+            .news_contents .mini_grey {
+                color: grey;
+                font-size: 40px;
+                margin-top: 30px;
+            }
+            
+            .news_contents .line {
+                width: 100px;
+                margin-left: 20px;
+                margin-top: 15px;
+                border-bottom: 5px solid grey;
+            }
+            /* footer*/
+            .ft {
+                margin-top: 40px;
+            }
+            
+            .ft_list_wrap {
+                margin-bottom: 20px;    
+            }
+            
+            .ft_list_wrap a:hover{
+                color: aqua;
+            }
+            
+            .ft_sns {
+                float: left;
+            }
+            
+            .ft_sns > li {
+                float: left;
+                margin: 0 10px;
+            }
+            
+            .ft_list {
+                float: right;
+            }
+            
+            .ft_list > li {
+                float: left;
+                margin: 15px;
+            }
+            
+            .ft_addr > p {
+                margin-bottom: 20px;
+            }
+            
+            .detail_button:hover {
+                background-color: white;
+                border: 2px solid black;
+                color: #222222;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="header_wrap container clear">
+            <h1 class="logo"><a href="#"></a></h1>
+            <nav class="gnb_wrap">
+                <ul class="clear">
+                    <li><a href="#">MODELS</a></li>
+                    <li><a href="#">EXPLORE</a></li>
+                    <li><a href="#">ACCESSORIES</a></li>
+                    <li><a href="#">SERVIECES & PARTS</a></li>
+                    <li><a href="#">OFFERS</a></li>
+                    <li><a href="#">법인판매 & USED</a></li>
+                    <li><a href="#">SHOWROOM</a></li>
+                    <li><a href="#">SERVICE CENTER</a></li>
+                </ul>
+            </nav>
+            <ul class="gnb_option clear">
+                <li><a href="#"><i class="fab fa-angellist fa-lg"></i></a></li>
+                <li><a href=""><i class="fas fa-burn fa-lg"></i></a></li>
+            </ul>
+        </header>
+        <div class="contents_wrap container">
+            <img src="images/main-mini.jpg" alt="">
+            <div class="car_intro_wrap">
+                <div class="car_intro clear">
+                    <div class="car_intro_text">
+                        <h2><span class="mini_title">MINI</span> 3 DOOR</h2>
+                        <p>EXPLORE MORE CORNERS</p>
+                    </div>
+                    <a class="detail_button" href="#">자세히 보기</a>
+                </div>
+                <ul class="car_list clear">
+                    <li><a href="#">
+                        <div>
+                            <img src="images/3-door-hatch.png" alt="">
+                            <h4>3-DOOR HATCH</h4>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div>
+                            <img src="images/5-door-hatch.png" alt="">
+                            <h4>5-DOOR HATCH</h4>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div>
+                            <img src="images/convertible.png" alt="">
+                            <h4>CONVERTIBLE</h4>    
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div>
+                            <img src="images/clubman.png" alt="">
+                            <h4>CLUBMAN</h4>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div>
+                            <img src="images/countryman.png" alt="">
+                            <h4>COUNTRYMAN</h4>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div>
+                            <img src="images/john=cooper-works.png" alt="">
+                            <h4>JOHN COOPER WORKS</h4>
+                        </div>
+                    </a></li>
+                </ul>
+            </div>
+            <div class="car_offer_wrap clear">
+                <h3>OFFERS</h3>
+                <div class="car_offer">
+                    <img src="images/mini_recall.jpg" alt="">
+                    <h4><span class="mini_title mini_grey">MINI</span> 리콜 서비스.</h4>
+                    <a class="detail_button" href="#">자세히 보기</a>
+                </div>
+                <div class="car_offer">
+                    <img src="images/mini_lemon.jpg" alt="">
+                    <h4><span class="mini_title mini_lemon">MINI</span> 코리아 한국형 레몬법 적용.</h4>
+                    <a class="detail_button" href="#">자세히 보기</a>
+                </div>
+            </div>
+            <div class="explore_wrap">
+                <h3 class="ex_h3">EXPLORE <span class="mini_title">MINI</span></h3>
+                <div class="explore clear">
+                    <div class="half_wrap left_pos">
+                        <img src="images/explore-mini1.jpg" alt="">
+                    </div>
+                    <div class="half_wrap right_pos">
+                        <h4 class="ex_h4">MINI VISION NEXT 100.</h4>
+                        <p>100년 뒤의 MINI는 어떤 모습일까요? 
+                            독특한 개인의 경험과 카 셰어링의 창의적인 결합,MINI VISION NEXT 100 입니다.</p>
+                        <a class="detail_button" href="#">자세히 보기</a>
+                    </div>
+                </div>
+                <div class="explore clear">
+                    <div class="half_wrap left_pos">
+                        <img src="images/explore-mini2.jpg" alt="">
+                    </div>
+                    <div class="half_wrap right_pos">
+                        <h4 class="ex_h4">MINI SUPERLEGGERA VISION.</h4>
+                        <p>특유의 영국 헤리티지가 드러나는 독특하고 참신한 디자인과 탁월한 기술력을 강조한 MINI의 미래형 컨셉카를 만나보세요.</p>
+                        <a class="detail_button" href="">자세히 보기</a>
+                    </div>
+                </div>
+            </div>
+            <div class="news_contents_wrap">
+                <h3>- NEWS -</h3>
+                <div class="clear">
+                    <div class="news_contents">
+                        <img src="images/mini_heritage.jpg" alt="">
+                        <h4><span class="mini_title mini_grey">MINI</span> HERITAGE - 수십 년에 걸친 전설적인 혁신.</h4>
+                        <div class="line"></div>
+                    </div>
+                    <div class="news_contents">
+                        <img src="images/mini_living.jpg" alt="">
+                        <h4><span class="mini_title mini_grey">MINI</span> LIVING - 살롱델모빌에 짓다.</h4>
+                        <div class="line"></div>
+                    </div>
+                    <div class="news_contents">
+                        <img src="images/mini_fashion.jpg" alt="">
+                        <h4><span class="mini_title mini_grey">MINI</span> FASHION - 관습에 도전하는 캡슐 컬렉션.</h4>
+                        <div class="line"></div>
+                    </div>
+                </div>
+                <a class="detail_button" href="#">모든 소식 보기</a>
+            </div>
+        </div>
+        <footer class="ft container">
+            <div class="ft_list_wrap clear">
+                <ul class="ft_sns">
+                    <li><a href="#"><i class="fab fa-facebook-f fa-3x"></i></a></li>
+                    <li><a href="#"><i class="fab fa-youtube fa-3x"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram fa-3x"></i></a></li>
+                </ul>
+                <ul class="ft_list">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">법적고지</a></li>
+                    <li><a href="#">개인정보 처리방침</a></li>
+                    <li><a href="#">영상정보처리기기 운영 관리방침</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="#">CARRER</a></li>
+                    <li><a href="#">BMW GROUP WEBSITE</a></li>
+                </ul>
+            </div>
+            <address class="ft_addr">
+                <p>주소 : 서울특별시 중구 퇴계로 100 (회현동)</p>
+                <p>※ 웹사이트 상에 사용된 이미지들은 국내에 적용된 사양과 상이할 수 있습니다.</p>
+                <p>COPYRIGHT © 2014 BMW KOREA. ALL RIGHTS RESERVED.</p>
+            </address>
+        </footer>
+    </body>
+</html>
