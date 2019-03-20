@@ -1,0 +1,63 @@
+@charset "utf-8";
+@font-face { font-family: 'Goyang'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Goyang.woff') format('woff'); font-weight: normal; font-style: normal; }
+/*css reset*/
+body, h1, p{
+    margin: 0;
+    padding: 0;
+}
+/*design area*/
+body {
+    font-family: 'Goyang';
+    background-image: url(images/body-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    width: 700px;
+    margin: 100px auto;
+    text-align: center;
+    color: rgb(227, 227, 227);
+    border-radius: 20px;
+}
+
+.header {
+    background-color: rgba(68, 102, 132, 0.29) ;
+    height: 200px;
+    padding-top: 1px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.header > .title {
+    margin-top: 20px;
+}
+
+.contents {
+    background-color: rgba(9, 41, 69, 0.9);
+    height: 270px;
+    border-top: 5px solid white;
+}
+
+.my_picture {
+    width: 160px;
+    margin: -100px 0 20px;
+    border: 5px solid white;
+    border-radius: 20px;
+}
+
+.contents > p {
+    margin: 10px;    
+}
+
+.footer {
+    background-color: rgba(31, 53, 72, 0.77);
+    height: 100px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-top: 1px;
+}
+
+.footer > p {
+    margin-top: 20px;
+}
