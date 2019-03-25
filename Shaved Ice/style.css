@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+
+/*css reset*/
+body, h2, p{
+    margin: 0;
+    padding: 0;
+}
+
+/*design area*/
+body {
+    background-color: #efefef;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.wrapper {
+    width: 1410px;
+    margin: 200px auto;
+}
+
+.contents {
+    width: 350px;
+    text-align: center;
+    box-shadow: 2px 2px #00000057;
+    border-radius: 10px;
+    background-color: white;
+    padding: 50px;
+    float: left;
+}
+
+.contents:nth-child(2) {
+    margin: 0 30px;
+}
+
+.contents img {
+    margin-top: -180px;
+}
+
+.contents .title {
+    font-size: 30px;
+    display: inline-block;
+    padding: 20px;
+    border-bottom: 5px solid black;
+    margin-bottom: 40px;
+}
+
+.contents.grape .title {
+    border-bottom-color: #881b1a;
+    color: #881b1a;
+}
+
+.contents.injeolmi .title {
+    border-bottom-color: #cdac64;
+    color: #cdac64;
+}
+
+.contents.green .title {
+    border-bottom-color: #89a261;
+    color: #89a261;
+}
+
+.contents .info .taste {
+    color: white;
+    padding: 2px;
+}
+
+.contents.grape .info .taste {
+    background-color: #881b1a;
+}
+
+.contents.injeolmi .info .taste {
+    background-color: #cdac64;
+}
+
+.contents.green .info .taste {
+    background-color: #89a261;
+}
