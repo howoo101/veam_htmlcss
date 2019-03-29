@@ -1,0 +1,340 @@
+/*@import url('https://fonts.googleapis.com/css?family=Nanum+Myeongjo:400,700,800|Roboto+Condensed:400,700');*/
+/*css reset */
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+}
+
+/*design area*/
+
+body {
+    font-size: 12px;
+    color: #333;
+/*
+    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Nanum Myeongjo', serif;
+*/
+}
+
+.center {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.clear:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.blind {
+    position: absolute;
+    left: -9999px;
+}
+
+/* header */
+.hd {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.hd .logo {
+    display: block;
+    float: left;
+    text-indent: -9999px;
+    margin-right: 190px;
+    width: 171px;
+    height: 49px;
+    background-image: url(images/logo.gif);
+}
+
+.hd .search_box {
+    position: relative;
+    float: left;
+    width: 300px;
+    border: 2px solid #285e91;
+    border-radius: 5px;
+    padding: 7px 62px 7px 7px;
+    box-sizing: border-box;
+}
+
+#search {
+    width: 100%;
+    height: 25px;
+    border: none;
+}
+
+.search_box>form input[type="submit"] {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 52px;
+    height: 100%;
+    text-indent: -9999px;
+    border: none;
+    background-image: url(images/btn_search.png);
+    background-position: center;
+}
+
+.hd .util {
+    float: right;
+    margin-top: 17px;
+}
+
+.hd .util li {
+    float: left;
+    margin-left: 10px;
+    padding-left: 10px;
+    border-left: 1px solid #999;
+    line-height: 12px;
+}
+
+.hd .util li a {
+    color: #999;
+}
+
+.hd .util li:first-child {
+    border: none;
+}
+
+/*gnb*/
+.gnb_wrap {
+    border-top: 2px solid #CBCBCC;
+    border-bottom: 2px solid #CBCBCC;
+    margin-bottom: 20px;
+    height: 35px;
+}
+
+.gnb ul {
+    text-align: center;
+}
+
+.gnb ul li {
+    float: left;
+    width: 20%;
+    line-height: 35px;
+    border-left: 1px solid #CBCBCC;
+    box-sizing: border-box;
+}
+
+.gnb ul li:last-child {
+    border-right: 1px solid #CBCBCC;
+}
+
+/*contents*/
+.contents .title {
+    font-weight: bold;
+}
+
+.contents .banner_list {
+    float: left;
+    width: 280px;
+    height: 380px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px #8e8b8b;
+    letter-spacing: -0.5px;
+}
+
+.contents .banner_list .banner {
+    padding: 23px 10px 23px 100px;
+    border-bottom: 1px solid #999;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+.banner.box1 {
+    background-image: url(images/m_box_bg01.gif);
+}
+
+.banner.box2 {
+    background-image: url(images/m_box_bg02.gif);
+}
+
+.banner.box3 {
+    background-image: url(images/m_box_bg03.gif);
+}
+
+.banner.box4 {
+    background-image: url(images/m_box_bg04.gif);
+} 
+
+.banner.box5 {
+    background-image: url(images/m_box_bg05.gif);
+}
+
+.banner.box6 {
+    background-image: url(images/m_box_bg06.gif);
+}
+
+.contents .banner_img {
+    float: left;
+    margin: 0 30px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px #8e8b8b;
+}
+
+.contents .banner_img img {
+    height: 380px;
+}
+
+.contents .banner_list:nth-child(3) div:last-child {
+    text-align: center;
+    padding: 5px 0;
+    background-color: #f5f5f5;
+}
+
+.contents .banner_list:nth-child(3) div:last-child a{
+    display: inline-block;
+    margin: 5px 0;
+}
+
+.contents .horizontal_banner {
+    margin: 20px 0;
+    border: 1px solid #999;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px #8e8b8b;
+}
+
+.contents .horizontal_banner div {
+    width: 33.3%;
+    height: 94px;
+    float: left;
+    padding: 23px 10px 23px 98px;
+    border-right: 1px solid #999;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    letter-spacing: -0.5px;
+}
+
+.horizontal_banner .box8 {
+    background-image: url(images/m_box_bg08.gif);
+}
+
+.horizontal_banner .box9 {
+    background-image: url(images/m_box_bg09.gif);
+}
+
+.horizontal_banner .box10 {
+    background-image: url(images/m_box_bg10.gif);
+}
+
+.contents .info {
+    margin-bottom: 40px;
+}
+
+.contents .info .notice {
+    position: relative;
+    float: left;
+    width: 460px;
+    padding: 20px 20px 0 30px;
+    border:1px solid #999;
+    border-radius: 5px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 2px #8e8b8b;
+}
+
+.contents .info .title {
+    margin-bottom: 30px;
+    font-size: 17px;
+}
+
+.contents .info .notice ul {
+    padding: 0 0 20px 120px;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-position: 0 15px;
+}
+
+.contents .info .notice ul li {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.contents .info .notice ul li span {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.contents .info .notice:last-child {
+    float: right;
+}
+
+.contents .info .notice .box11 {
+    background-image: url(images/m_box_bg11.gif);
+}
+
+.contents .info .notice .box12 {
+    background-image: url(images/m_box_bg12.gif);
+}
+
+.contents .info .notice > a {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-indent: -9999px;
+    background-image: url(images/btn_more.gif);
+    width: 18px;
+    height: 18px;
+}
+
+/*footer*/
+.ft {
+    border-top: 2px solid #CBCBCC;
+    padding: 20px 0;
+}
+
+.ft > div {
+    box-sizing: border-box;
+}
+
+.ft .logo2 {
+    float: left;
+    display: block;
+    width: 70px;
+    height: 53px;
+    margin-right: 40px;
+    text-indent: -9999px;
+    background-image: url(images/btm_logo.png);
+}
+
+.ft .ft_info {
+    float: left;
+}
+
+.ft .ft_info>ul {
+    margin-bottom: 20px;
+}
+
+.ft .ft_info li {
+    float: left;
+    margin-right: 10px;
+    padding-right: 10px;
+    border-right: 1px solid #999;
+}
+
+.ft .ft_site .ft_bg {
+    float: left;
+    width: 100px;
+    height: 65px;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    background-size: 100px 65px;
+    margin-right: 10px;
+}
+
+.ft_bg.bg1 {
+    background-image: url(images/btm_wa_auth.gif);
+}
+
+.ft_bg.bg2 {
+    background-image: url(images/btm_banner.gif);
+}
+
